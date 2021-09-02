@@ -1,4 +1,4 @@
-baseURL: 'https://stephen-zhu-portfolio.netlify.app/'
+baseURL: https://stephen-zhu-portfolio.netlify.app/
 languageCode: en-us
 title: Portfolio for Stephen Zhu
 theme: forty
