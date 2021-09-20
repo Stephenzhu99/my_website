@@ -7,10 +7,9 @@ googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
-    buttonText: Get Started
+    buttonText: Have a Look
     subtitle: |-
-      A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-      AND RELEASED UNDER THE CREATIVE COMMONS.
+      Welcome to my portfolio, wander around to find out about me, and my projects.
     title: Hi, my name is Stephen
   blog: {}
   contact:
@@ -59,33 +58,33 @@ params:
         label: LinkedIn
         url: https://www.linkedin.com/in/stephen-zhu-26a1781b4/
   image: ''
-  name: Your name
+  name: Stephen Zhu
   navigation:
     button1:
-      - name: Get Started
+      - name: Have a Look
         url: blogs
-    button2:
-      - name: Log In
-        url: '#'
+#    button2:
+#      - name: Log In
+#        url: '#'
     links:
       - name: Home
         url: '#'
-      - name: Blogs
+      - name: Projects
         url: blogs
-      - name: Generic Blog
-        url: blogs/ipsum
-      - name: Elements
-        url: elements.html
+      - name: About Me
+        url: blogs/about
+      - name: My CV
+        url: blogs/StephenZhuCV.pdf
     menu: Menu
-    subtitle: By HTML5 Up
-    title: Forty
+    subtitle: Portfolio
+    title: Stephen
   tiles:
     enable: yes
     showcase:
       - image: pic01.jpg
         subtitle: Ipsum Dolor Sit Amet
-        title: Aliquam
-        url: blogs/aliquam
+        title: Gapminder Country Comparison
+        url: blogs/gapminder
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
         title: Tempus
@@ -107,7 +106,7 @@ params:
         title: Etiam
         url: blogs/ipsum
   two:
-    buttonText: Get Started
+    buttonText: Continue
     enable: yes
     subtitle: "Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero.
       \r\n    Mauris aliquet magna magna sed nunc rhoncus pharetra. \r\n    Pellentesque
