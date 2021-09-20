@@ -10,9 +10,11 @@ description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis mag
 draft: false
 image: pic08.jpg
 keywords: ""
-slug: animal_rescue1
+slug: animal_rescue
 title: Animal Rescue Incidents Analysis
 ---
+
+In this project, we analyse a dataset from The London Fire Brigade to see how many animals they rescued, what the distribution by animal type looks like, and similarly how cost of rescue varies.
 
 First, load the packages needed.
 
@@ -72,7 +74,7 @@ animal_rescue %>%
 
 animal_rescue %>% 
   
-  #count does the same thing as group_by and summarise
+  # count does the same thing as group_by and summarise
   # name = "count" will call the column with the counts "count" ( exciting, I know)
   # and 'sort=TRUE' will sort them from max to min
   count(animal_group_parent, name="count", sort=TRUE) %>% 
@@ -80,8 +82,6 @@ animal_rescue %>%
 
 
 ```
-
-Do you see anything strange in these tables?
 
 Finally, let us have a loot at the notional cost for rescuing each of these animals. As the LFB says,
 
@@ -136,8 +136,6 @@ animal_rescue %>%
 
 ```
 
-Compare the mean and the median for each animal group. waht do you think this is telling us? Anything else that stands out? Any outliers?
-
 Finally, let us plot a few plots that show the distribution of incident_cost for each animal group.
 
 ```{r, plots_on_incident_cost_by_animal_group,message=FALSE, warning=FALSE}
@@ -160,9 +158,7 @@ base_plot + stat_ecdf(geom = "step", pad = FALSE) +
 
 ```
 
-Which of these four graphs do you think best communicates the variability of the `incident_notional_cost` values? Also, can you please tell some sort of story (which animals are more expensive to rescue than others, the spread of values) and speculate about the differences in the patterns.
-
-Out of the four graphs, I think that the empirical cumulative density function presents most complete information about the distribution of incident notional cost by animal type. This graph is capable of showing both the distribution of costs in each cost range, just like the histogram, and the critical numbers quadrant figures to represent the distribution, which is the benefit of box plots.
+Out of the four graphs, the empirical cumulative density function presents most complete information about the distribution of incident notional cost by animal type. This graph is capable of showing both the distribution of costs in each cost range, just like the histogram, and the critical numbers quadrant figures to represent the distribution, which is the benefit of box plots.
 
 From the graph, we can see that for most common animal categories (all but ferret and rabit), the incident notional cost for most incidents are relatively low and only a smaller portion of incidents have a high cost. This aligns with the previous oberservations: mean is higher than medium because greater portion of the incident cost lie in the lower range. Linking back to real world, this would mean that most animal rescue cases are sorted out relatively easily without using the equipment heavily. However, there are sometimes cases that require either long rescue time or heavy equipment workload to resecue the animals, and these cases pulled the mean cost up.
 

@@ -60,9 +60,9 @@ params:
   image: ''
   name: Stephen Zhu
   navigation:
-    button1:
-      - name: Have a Look
-        url: blogs
+#    button1:
+#      - name: Have a Look
+#        url: blogs
 #    button2:
 #      - name: Log In
 #        url: '#'
@@ -82,17 +82,17 @@ params:
     enable: yes
     showcase:
       - image: pic01.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Gapminder Country Comparison
+        subtitle: How world life expectancty changed over time from 1952 to 2007?
+        title: World LifeExp Analysis
         url: blogs/gapminder
       - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Tempus
-        url: blogs/tempus
+        subtitle: Is fear of immigration the true cause of Brexit?
+        title: Brexit Vote Analysis
+        url: blogs/brexit
       - image: pic03.jpg
-        subtitle: Lorem Etiam Nullam
-        title: Magna
-        url: blogs/magna
+        subtitle: How many animals do the firefighters save and what are the costs?
+        title: Animal Rescue Incidents Analysis
+        url: blogs/animal_rescue
       - image: pic04.jpg
         subtitle: Nisl Sed Aliquam
         title: Ipsum

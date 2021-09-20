@@ -7,7 +7,7 @@ description: Lorem Etiam Nullam
 draft: false
 image: pic09.jpg
 keywords: ""
-slug: brexit1
+slug: brexit
 title: Brexit Vote Analysis
 ---
 

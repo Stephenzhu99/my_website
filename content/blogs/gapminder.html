@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2021-9-20T21:28:43-05:00"
-description: ""
+description: "The `gapminder` dataset from R `gapminder` package has data on life expectancy, population, and GDP per capita for 142 countries from 1952 to 2007. The aim of the project today is to have a glance at how the average life expectancy of across 5 continents changed over the past 55 years."
 draft: false
 image: pic10.jpg
 keywords: ""
@@ -16,6 +16,11 @@ title: Gapminder Country Comparison
 
 <p>The <code>gapminder</code> dataset from R <code>gapminder</code> package has data on life expectancy, population, and GDP per capita for 142 countries from 1952 to 2007. The aim of the project today is to have a glance at how the average life expectancy of across 5 continents changed over the past 55 years.</p>
 <p>First, load the packages needed.</p>
+<pre class="r"><code>library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(gapminder)  # gapminder dataset
+library(here)
+library(janitor)
+library(skimr)</code></pre>
 <p>Then we have a look at the completness and first 20 rows of the data.</p>
 <pre class="r"><code>skim(gapminder)</code></pre>
 <table>
@@ -217,7 +222,7 @@ plot1 &lt;- ggplot(data = country_data, mapping = aes(x = year,y = lifeExp))+
 
  plot1</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="/blogs/stephen_zhu_pre_programme_assignment_files/figure-html/lifeExp_one_country-1.png" width="672" /></p>
+<p><img src="/blogs/gapminder_files/figure-html/lifeExp_one_country-1.png" width="672" /></p>
 <p>Next I want to add a title, using the <code>labs()</code> function.</p>
 <pre class="r"><code># add an informative title to plot1
  plot1&lt;- plot1 +
@@ -228,15 +233,17 @@ plot1 &lt;- ggplot(data = country_data, mapping = aes(x = year,y = lifeExp))+
 
  plot1</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="/blogs/stephen_zhu_pre_programme_assignment_files/figure-html/lifeExp_one_country_with_label-1.png" width="672" /></p>
+<p><img src="/blogs/gapminder_files/figure-html/lifeExp_one_country_with_label-1.png" width="672" /></p>
 <p>Similarly, a plot for all countries in the <em>continent</em> I come from is produced, where the <em>country</em> variable is mapped on both the colour and group aesthetic to show the countries by different colour but also group them together when computing line of best fit.</p>
 <pre class="r"><code># create the plot
  ggplot(continent_data, mapping = aes(x = year , y =  lifeExp, colour= country, group =country))+
    geom_point() + 
    geom_smooth(se = FALSE) +
-   NULL</code></pre>
+   labs(title = &quot;Oceania Change in Life Expectancy 1952-2007&quot;)</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="/blogs/stephen_zhu_pre_programme_assignment_files/figure-html/lifeExp_one_continent-1.png" width="672" /></p>
+<p><img src="/blogs/gapminder_files/figure-html/lifeExp_one_continent-1.png" width="672" /></p>
+<pre class="r"><code>   NULL</code></pre>
+<pre><code>## NULL</code></pre>
 <p>Finally, using the original <code>gapminder</code> data, I produced a life expectancy over time graph, faceted by continent. I removed all legends by adding the <code>theme(legend.position="none")</code> at the end of our ggplot.</p>
 <pre class="r"><code># create the plot
  ggplot(data = gapminder , mapping = aes(x = year, y =  lifeExp, color= continent))+
@@ -244,9 +251,10 @@ plot1 &lt;- ggplot(data = country_data, mapping = aes(x = year,y = lifeExp))+
    geom_smooth(se = FALSE) +
    facet_wrap(~continent) +
    theme(legend.position=&quot;none&quot;) + # remove all legends
+   labs(title = &quot;World Change in Life Expectancy 1952-2007 Faceted by Continents&quot;) +
    NULL</code></pre>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="/blogs/stephen_zhu_pre_programme_assignment_files/figure-html/lifeExp_facet_by_continent-1.png" width="672" /></p>
+<p><img src="/blogs/gapminder_files/figure-html/lifeExp_facet_by_continent-1.png" width="672" /></p>
 <p>After plotting the graphs, we can have a careful look at them. Several observations can be made, especially on the differences among continents:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Geneal Trend:</strong> First and most general observation is that the life expectancy in all continents have been increasing in the past years since 1952, likely because of development in technology that improved everyone’s life quality. Besides, in all continents apart from Oceania, which has too small a sample size of only two countries, the rate of increase in life expectancy is slowing down. This signifies to a degree a halt of significant development in life sciences and related technologies.</p></li>

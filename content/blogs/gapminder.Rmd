@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2021-9-20T21:28:43-05:00"
-description: ""
+description: "The `gapminder` dataset from R `gapminder` package has data on life expectancy, population, and GDP per capita for 142 countries from 1952 to 2007. The aim of the project today is to have a glance at how the average life expectancy of across 5 continents changed over the past 55 years."
 draft: false
 image: pic10.jpg
 keywords: ""
@@ -15,7 +15,7 @@ The `gapminder` dataset from R `gapminder` package has data on life expectancy, 
 
 First, load the packages needed.
 
-```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+```{r load-libraries, warning=FALSE, message=FALSE}
 library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
 library(gapminder)  # gapminder dataset
 library(here)
@@ -76,6 +76,7 @@ Similarly, a plot for all countries in the *continent* I come from is produced, 
  ggplot(continent_data, mapping = aes(x = year , y =  lifeExp, colour= country, group =country))+
    geom_point() + 
    geom_smooth(se = FALSE) +
+   labs(title = "Oceania Change in Life Expectancy 1952-2007")
    NULL
 ```
 
@@ -88,6 +89,7 @@ Finally, using the original `gapminder` data, I produced a life expectancy over 
    geom_smooth(se = FALSE) +
    facet_wrap(~continent) +
    theme(legend.position="none") + # remove all legends
+   labs(title = "World Change in Life Expectancy 1952-2007 Faceted by Continents") +
    NULL
 ```
 
