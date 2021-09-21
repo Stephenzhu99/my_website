@@ -3,17 +3,13 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:42:51-05:00"
-description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna
-  sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa
-  sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem
-  consequat tincidunt. Vivamus et sagittis tempus.
+description: This is a group data analytic project completed by LBS MAM2022 Study Group 9.
 draft: false
-image: pic07.jpg
+image: analytic.jpeg
 keywords: ""
 slug: hw
-title: LBS MAM2022 Group Project 3
+title: Group Project Three
 ---
-
 
 ```{r, setup, echo=FALSE}
 knitr::opts_chunk$set(

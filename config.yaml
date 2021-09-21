@@ -72,7 +72,7 @@ params:
       - name: Projects
         url: blogs
       - name: About Me
-        url: blogs/about
+        url: post/about
       - name: My CV
         url: blogs/StephenZhuCV.pdf
     menu: Menu
@@ -81,19 +81,19 @@ params:
   tiles:
     enable: yes
     showcase:
-      - image: pic01.jpg
+      - image: world_map.jpg
         subtitle: How world life expectancty changed over time from 1952 to 2007?
         title: World LifeExp Analysis
         url: blogs/gapminder
-      - image: pic02.jpg
+      - image: brexit.jpg
         subtitle: Is fear of immigration the true cause of Brexit?
         title: Brexit Vote Analysis
         url: blogs/brexit
-      - image: pic03.jpg
+      - image: animal.jpg
         subtitle: How many animals do the firefighters save and what are the costs?
         title: Animal Rescue Incidents Analysis
         url: blogs/animal_rescue
-      - image: pic04.jpg
+      - image: analytic.jpeg
         subtitle: Group work with LBS MAM2022 Study Group Nine
         title: Group Project Three
         url: blogs/hw

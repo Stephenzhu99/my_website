@@ -3,9 +3,9 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: Lorem Etiam Nullam
+description: In this project, we aim to analyse data of Brexit Vote to see its distribution and whether Brexit is mainly driven by the fear of immigration.
 draft: false
-image: pic09.jpg
+image: brexit.jpg
 keywords: ""
 slug: brexit
 title: Brexit Vote Analysis
